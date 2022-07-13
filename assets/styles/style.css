@@ -1,0 +1,1211 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* THE UNIVERSAL SET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* THE FONT FACE */
+@font-face {
+    font-family: LightFont;
+    src: url(../fonts/Heebo/static/Heebo-Light.ttf);
+}
+
+@font-face {
+    font-family: RegularFont;
+    src: url(../fonts/Heebo/static/Heebo-Regular.ttf);
+}
+
+@font-face {
+    font-family: BoldFont;
+    src: url(../fonts/Heebo/static/Heebo-Bold.ttf);
+}
+
+/*WHEN SOMETHING IS HIGHLIGHTED*/
+::selection {
+    background: var(--background-color);
+    color: var(--just-color);
+}
+
+/* THE BODY */
+body {
+    font-size: 16px;
+    font-family: RegularFont;
+}
+
+p {
+    width: 80%;
+    font-size: 90%;
+    color: var(--paragraphs-color);
+}
+
+/* THE ROOT */
+:root {
+    --background-color: #000;
+    --hover-color: #1DA1F2
+        /*#E93869*/
+    ;
+    --paragraphs-color: #777;
+    --background: #EDF1FD;
+    --just-color: #fff;
+}
+
+/* THE WRAPPER */
+
+.thewrapper {
+    background: var(--just-color);
+}
+
+/* WRAPPER FIRST CHILD  */
+.firstwrap {
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    height: 607px;
+    padding: 1% 6%;
+    position: relative;
+    padding-bottom: 2.7em;
+
+}
+
+/* THE FIRST WRAP IN THE ABOUT ME PAGE */
+.about-page{
+    height: 100%;
+}
+/* THE HEADER */
+.theheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 6%;
+    min-height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: var(--background);
+}
+
+/* THE HEADER TITLE LINK*/
+.headertitlelink {
+    color: var(--background-color);
+}
+
+/* THE HEADER TITLE */
+.headertitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* THE HEADER ICON */
+.headericon {
+    font-size: 30px;
+}
+
+/* LIST NAVIGATION */
+.list-Nav {
+    list-style: none;
+    display: flex;
+    gap: 3em;
+}
+
+/* THE ACTIVE NAV LINK */
+.aktivenavlinks {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--hover-color);
+    font-family: BoldFont;
+    font-weight: 900;
+}
+
+/* THE NAV LINK */
+.navlinks {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--background-color);
+    font-family: BoldFont;
+    transition: 0.7s ease;
+}
+
+/* THE NAV LINK */
+.navlinks:hover {
+    color: var(--hover-color);
+}
+
+/* THE HARMBURGER MENU */
+.harmburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* THE BARS */
+.menu-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--hover-color);
+}
+
+/* THE INROWRAPPER */
+.theIntrowrapper {
+    display: flex;
+    gap: 4em;
+    align-items: center;
+    padding-top: 6.2%;
+}
+
+
+/* VERTICALLY ALIGNED ICONS */
+.verticalicons {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--just-color);
+    width: 5%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 1%;
+    background: var(--background);
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+
+/* DROP ICONS */
+.dropicons {
+    position: relative;
+}
+
+.dropicons:hover>.content {
+    display: flex;
+}
+
+/* DROP DOWN CONTENTS */
+.content {
+    position: absolute;
+    background-color: var(--background);
+    padding: 5px;
+    top: 3px;
+    left: 58px;
+    font-variant: small-caps;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: none;
+}
+
+/* THE DROPDOWN CONTENT BEFORE */
+.content::before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent var(--background) transparent transparent;
+}
+
+/* THE ICONS  */
+.class {
+    border: 2px solid transparent;
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: var(--background-color);
+    color: var(--background);
+    font-size: 20px;
+}
+
+/* THE FIRST ICON HOVER EFFECT */
+.dropicons:hover .firstclass {
+    background: #E93869;
+}
+
+/* THE SECOND ICON HOVER EFFECT */
+.dropicons:hover .secondclass {
+    background: #0077B5;
+}
+
+/* THE THIRD ICON */
+.thirdclass {
+    width: 42px;
+    height: 42px;
+    padding: 30%;
+}
+
+/* THE THIRD ICON HOVER EFFECT */
+.dropicons:hover .thirdclass {
+    background: #0F92F3;
+}
+
+/* THE FOURTH ICON HOVER EFFECT */
+.dropicons:hover .fourthclass {
+    background: #0077B5;
+}
+
+/* MY INTRODUCTION WRAPPER */
+.myself {
+    align-items: center;
+    display: flex;
+}
+
+/* WHO I AM*/
+.whoiam {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* TINY HEADER */
+.tinyheader {
+    font-variant: small-caps;
+    position: relative;
+}
+
+/* MY NAME INTODUCTION */
+.myname {
+    text-transform: uppercase;
+    font-family: BoldFont;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+/* THE OUT OF LEAGUE WRAPPER */
+.outofleague p {
+    padding-bottom: 1em;
+}
+
+/* THE SPAN COLOR */
+.spancolor {
+    color: var(--hover-color);
+}
+
+/* THE BUTTON */
+.button {
+    display: inline-block;
+    padding: .5em;
+    text-transform: capitalize;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    /* transition: 0.7s ease;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: 0.7s ease; */
+}
+
+/* THE BUTTON HOVER EFFECT */
+.button:hover>.buttonlink {
+    color: var(--hover-color);
+}
+
+/*THE BUTTON BEFORE EFFECT*/
+.button:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: var(--just-color);
+    height: 100%;
+    transition: width 1s;
+    z-index: -1;
+    transition: 0.7s ease;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
+}
+
+/* THE BUTTON BEFORE HOVER EFFECT */
+.button:hover::before {
+    width: 100%;
+}
+
+/* THE BUTTON AFTER EFFECT */
+.button:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--hover-color);
+    /* border-radius: 10rem; */
+    z-index: -2;
+}
+
+/* THE BUTTON LINK */
+.buttonlink {
+    color: var(--just-color);
+    text-decoration: none;
+    display: block;
+    transition: 0.7s ease;
+}
+
+/* THE SECOND WRAPPER */
+.secondwrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1% 6%;
+    padding-top: 10%;
+}
+
+/* ABOUT AND SKILLS WRAPPER */
+.aboutandskills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+
+
+/* TALES BOUT ME */
+.aboutme {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+/* CALCULATION OF TOTAL PROJECTS */
+.memyself {
+    background: var(--just-color);
+    border: 1px solid var(--background);
+    padding: 30px 25px;
+    border-radius: 5px;
+    display: flex;
+    gap: .5em;
+    height: 150px;
+    flex-direction: column;
+}
+
+.memyself span {
+    color: var(--hover-color);
+}
+
+/* THE FIRST CHILD OF ABOUT AND SKILLS WRAPPER */
+.self1 {
+    grid-column: 1/5;
+    grid-row: 1;
+    padding: 0%;
+}
+
+
+/* THE LIST ITEMS IN THE TOOLS EXPERTISE */
+.toolsexpertise li {
+    margin: 20px 0;
+    padding: 10px;
+    list-style: none;
+}
+
+/* THE PROGRASS BAR */
+.bar {
+    background: var(--background);
+    display: block;
+    height: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -moz-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -ms-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* THE SPAN IN THE PROGRESS BAR */
+.bar span {
+    height: 15px;
+    float: left;
+    background: var(--hover-color);
+}
+
+/* THE SKILLS */
+.skills {
+    text-transform: uppercase;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* MY SKILLS > HTML */
+.html {
+    width: 90%;
+    animation: html 3s;
+    -webkit-animation: html 3s;
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        with: 90%;
+    }
+}
+
+/* MY SKILLS > CSS */
+.css {
+    width: 80%;
+    animation: css 3s;
+    -webkit-animation: css 3s;
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        with: 80%;
+    }
+}
+
+/* MY SKILLS > PHP */
+.php {
+    width: 70%;
+    animation: php 3s;
+    -webkit-animation: php 3s;
+}
+
+@keyframes php {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        with: 70%;
+    }
+}
+
+/* MY SKILLS > HTML */
+.javascript {
+    width: 79%;
+    animation: javascript 3s;
+    -webkit-animation: javascript 3s;
+}
+
+@keyframes javascript {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        with: 79%;
+    }
+}
+
+/* THE THIRD WRAPPER */
+.thirdwrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1% 6%;
+    padding-top: 10%;
+    gap: 2em;
+}
+
+/* THE HEADER OF THE THIRD WRAPPER */
+.thirdwrapheader {
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+/* THE PARAGRAPH IN THE HEADER OF THE THIRD WRAPPER */
+.thirdwrapheader p {
+    width: 50%;
+    text-align: center;
+}
+
+/* THE SERVICE BOXES */
+.theserviceboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns: repeat(3, 2fr); */
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+/* THE BOXES ITSELF */
+.theboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 50px 25px;
+    border-radius: 10px;
+    transition: 0.7s ease;
+    background: var(--just-color);
+    margin-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
+}
+
+/* THE BOXES HOVER EFFECT */
+.theboxes:hover {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    border-color: var(--just-color);
+}
+
+/* THE EXCEPTIONAL PARAGRAPH */
+.exception {
+    width: 100%;
+}
+
+/* THE HOVER EFFECT ICONS */
+.hovereffecticons {
+    font-size: 40px;
+    opacity: .2;
+    transition: 0.7s ease;
+    color: var(--hover-color);
+}
+
+/* THE BOXES AND THE ICONS HOVER EFFECT */
+.theboxes:hover .hovereffecticons {
+    opacity: 1;
+}
+
+/* THE BOXES HEADER */
+.theboxheader {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: BoldFont;
+}
+
+/* THE FOURTH WRAPPER */
+.fourthwrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1% 6%;
+    padding-top: 10%;
+    gap: 2em;
+}
+
+/* MY PROJECTS */
+.my-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+/* COULDN'T COME UP WITH A MORE RESPONSIBLE NAME */
+.div {
+    position: relative;
+}
+
+/* THE IMAGE WITH THE CLASS DIVIDED I WAS OUT OF NAMES WHEN I NAMED THIS*/
+.divided {
+    width: 100%;
+    height: 100%;
+    transition: 0.7s ease;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
+}
+
+/* THE DIVIDED HOVER EFFECT*/
+.div:hover .divided {
+    opacity: .3;
+}
+
+/* THE PROJECTS TEXTS */
+.projects_text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+/* THE LINK IN THE PROJECTS TEXTS HOVER EFFECT*/
+.div:hover .projects_text a {
+    color: var(--hover-color);
+    font-family: BoldFonts;
+}
+
+/* THE LINK IN THE PROJECTS TEXTS*/
+.projects_text a {
+    color: var(--background-color);
+    opacity: 1;
+    text-decoration: none;
+    transition: 0.7s ease;
+}
+
+/* THE FIFTH WRAPPER */
+.fifth-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1% 6%;
+    padding-top: 10%;
+    gap: 2em;
+}
+
+/* THE BOXES TESTIMONIAL */
+.boxes-testimonial {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+/* MY CLIENT TESTIMONIAL */
+.my-client {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 5%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid var(--background);
+    border-radius: 15px;
+    transition: 0.7s ease;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+/* MY CLIENT TESTIMONIAL  HOVER EFFECT*/
+.my-client:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* MY CLIENT NAME */
+.client-name {
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+/* THE CLIENT LINK ADDRESS */
+.client-link-address {
+    color: var(--paragraphs-color);
+    text-decoration: none;
+    transition: 0.7s ease;
+}
+
+/* MY CLIENT TESTIMONIAL | THE CLIENT LINK ADDRESS HOVER EFFECT*/
+.my-client:hover .client-link-address {
+    color: var(--hover-color);
+}
+
+/* MY CLIENT TESTIMONIAL | THE QUOTES*/
+.fa-quote-left {
+    transition: 0.7s ease;
+}
+
+/* MY CLIENT TESTIMONIAL | THE QUOTES HOVER EFFECT*/
+.my-client:hover .fa-quote-left {
+    color: var(--hover-color);
+}
+
+/* THE SIXTH WRAPPER */
+.sixth-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 6% 6%;
+    margin-top: 10%;
+    padding-top: 10%;
+    gap: 2em;
+    background: var(--background);
+}
+
+/* THE FOOTER */
+.the-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); */
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+/* THE FOOTERS CHILD */
+.footer-child {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+
+/* THE FORM INPUT*/
+form {
+    display: flex;
+}
+
+/* THE INPUT BOX */
+.input-box {
+    position: relative;
+    width: 250px;
+    /* min-height: 20px; */
+}
+
+/* THE EMAIL INPUT ITSELF */
+.input {
+    width: 100%;
+    padding: 6%;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    color: var(--paragraphs-color);
+}
+
+/* THE INPUT PLACEHOLDER */
+.input::placeholder {
+    text-transform: capitalize;
+    font-size: 100%;
+    color: var(--paragraphs-color);
+}
+
+/* THE SUBMIT BUTTON */
+.submit-button {
+    padding: 4%;
+}
+
+/* LINK UP */
+.link-up {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* somtochukwu */
+.somtochukwu {
+    text-decoration: none;
+    color: var(--hover-color);
+}
+
+/* THE ABOUT PAGE */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* THE ARROW */
+.fa-arrow-right-long   {
+font-family: LightFont;
+font-size: 15px;
+}
+/* THE LINKS WITH THE ARROW PARENT */
+.page_link {
+    display: flex;
+    gap: 1em;
+    text-transform: capitalize;
+    align-items: center;
+}
+
+/* THE LINKS THEMSELVES */
+.page_link a {
+    font-size: 16px;
+    color: var(--paragraphs-color);
+    text-decoration: none;
+    /* margin-left: 2em; */
+}
+/* THE BANNER CONTENT  */
+.banner_content {
+    margin-top: 70px;
+}
+/* THE CENTERED LINKS IN THE BANNER */
+.text-center {
+    text-align: center !important;
+}
+
+@media(max-width:340px) {
+
+    /* MY PROJECTS */
+    .my-projects {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    /* THE PROJECTS TEXTS */
+    .projects_text {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    /* THE SERVICE BOXES */
+    .theserviceboxes {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media(max-width:403px) {
+
+    /* ABOUT AND SKILLS WRAPPER MEDIA QUERY*/
+    .aboutandskills {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+@media (max-width:500px) {
+
+    /* MY NAME INTODUCTION */
+    .myname {
+        font-size: 18px;
+    }
+
+    .self1 {
+        grid-column: 1/2;
+    }
+
+    /* THE SKILLS */
+    .skills {
+        text-transform: none;
+        font-variant: small-caps;
+    }
+
+    /* THE BOXES TESTIMONIAL */
+    .boxes-testimonial {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media(max-width:600px) {
+
+    /* THE INROWRAPPER */
+    header+div.theIntrowrapper {
+        padding-top: 32%;
+    }
+
+    /* MY IMAGE */
+    .myimage img {
+        Width: 100%;
+        height: 100%;
+    }
+
+    /* MY CLIENT TESTIMONIAL */
+    .my-client {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:991px) {
+    p {
+        width: 100%;
+    }
+
+    /* THE HARMBURGER MENU */
+    .harmburger {
+        display: block;
+    }
+
+    /* THE HARMBURGER MENU | THE MENU BAR FIRST CHILD*/
+    .harmburger.active .menu-bar:nth-child(1) {
+        transform: rotate(45deg) translate(16px, -4px);
+    }
+
+    /* THE HARMBURGER MENU | THE MENU BAR SECOND CHILD*/
+    .harmburger.active .menu-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    /* THE HARMBURGER MENU | THE MENU BAR THIRD CHILD*/
+    .harmburger.active .menu-bar:nth-child(3) {
+        transform: rotate(-45deg) translate(15px, 4px);
+    }
+
+    /* LIST NAVIGATION */
+    .list-Nav {
+        position: fixed;
+        left: 0;
+        top: -200px;
+        gap: 0;
+        flex-direction: column;
+        background: var(--background);
+        width: 100%;
+        padding: 10% 0;
+        text-align: center;
+        transition: 0.7s;
+        -webkit-transition: 0.7s;
+        -moz-transition: 0.7s;
+        -ms-transition: 0.7s;
+        -o-transition: 0.7s;
+    }
+
+    /* LIST NAVIGATION */
+    .list-Nav.active {
+        /* left: 0; */
+        top: 60px;
+    }
+
+    /* WRAPPER FIRST CHILD  */
+    .firstwrap {
+        height: 100%;
+    }
+
+    /* THE INROWRAPPER */
+    div.theIntrowrapper {
+        flex-direction: column-reverse;
+        padding-top: 15%;
+    }
+
+    /* VERTICALLY ALIGNED ICONS */
+    .verticalicons {
+        justify-content: stretch;
+        align-items: stretch;
+        flex-direction: row;
+        border: none;
+        width: 100%;
+        box-shadow: none;
+        padding: 0%;
+        background: none;
+        border-radius: none;
+        -webkit-border-radius: none;
+        -moz-border-radius: none;
+        -ms-border-radius: none;
+        -o-border-radius: none;
+    }
+
+    /* MY INTRODUCTION WRAPPER */
+    .myself {
+        flex-direction: column-reverse;
+    }
+
+    /* MY IMAGE */
+    .myimage {
+        Width: 100%;
+        height: 100%;
+    }
+
+    .theboxheader {
+        font-size: 100%;
+    }
+
+
+    /* THE SIXTH WRAPPER */
+    .sixth-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 2% 6%;
+        margin-top: 10%;
+        /* padding-top: 10%; */
+        gap: 2em;
+        background: var(--background);
+    }
+}
+
+@media(max-width:1183px) {
+
+    /* THE INTRO WRAPPER */
+    .theIntrowrapper {
+        padding-top: 8%;
+    }
+}
+
+@media (min-width: 1432px) {
+
+    .firstwrap,
+    .secondwrapper,
+    .thirdwrapper,
+    .fourthwrapper,
+    .fifth-wrapper,
+    .sixth-wrapper,
+    .theheader {
+        /* padding: 30px 190px; */
+        padding: 2% 12%;
+    }
+
+    .firstwrap {
+        height: 10%;
+    }
+
+    /* THE INROWRAPPER */
+    .theIntrowrapper {
+        padding-top: 9%;
+    }
+}
+
+@media (min-width: 1658px) {
+
+    .firstwrap,
+    .secondwrapper,
+    .thirdwrapper,
+    .fourthwrapper,
+    .fifth-wrapper,
+    .sixth-wrapper,
+    .theheader {
+        /* padding: 30px 190px; */
+        padding: 2% 16%;
+    }
+}
+
+@media (min-width: 1653px) {
+
+    .firstwrap,
+    .secondwrapper,
+    .thirdwrapper,
+    .fourthwrapper,
+    .fifth-wrapper,
+    .sixth-wrapper,
+    .theheader {
+        /* padding: 30px 190px; */
+        padding: 2% 19%;
+    }
+}
+
+@media (min-width: 2000px) {
+
+    .firstwrap,
+    .secondwrapper,
+    .thirdwrapper,
+    .fourthwrapper,
+    .fifth-wrapper,
+    .sixth-wrapper,
+    .theheader {
+        padding: 30px 25%;
+    }
+}
+
+@media (min-width:2520px) {
+
+    .firstwrap,
+    .secondwrapper,
+    .thirdwrapper,
+    .fourthwrapper,
+    .fifth-wrapper,
+    .sixth-wrapper,
+    .theheader {
+        padding: 40px 26%;
+    }
+}
+
+@media (min-width:2625px) {
+
+    .firstwrap,
+    .secondwrapper,
+    .thirdwrapper,
+    .fourthwrapper,
+    .fifth-wrapper,
+    .sixth-wrapper,
+    .theheader {
+        padding: 40px 27%;
+    }
+}
+
+@media (min-width:2740px) {
+
+    .firstwrap,
+    .secondwrapper,
+    .thirdwrapper,
+    .fourthwrapper,
+    .fifth-wrapper,
+    .sixth-wrapper,
+    .theheader {
+        padding: 40px 28%;
+    }
+}
+
+@media (min-width:2864px) {
+
+    .firstwrap,
+    .secondwrapper,
+    .thirdwrapper,
+    .fourthwrapper,
+    .fifth-wrapper,
+    .sixth-wrapper,
+    .theheader {
+        padding: 40px 29%;
+    }
+}
+
+@media (min-width:3000px) {
+
+    .firstwrap,
+    .secondwrapper,
+    .thirdwrapper,
+    .fourthwrapper,
+    .fifth-wrapper,
+    .sixth-wrapper,
+    .theheader {
+        padding: 40px 30%;
+    }
+}
+
+@media (min-width:3150px) {
+
+    .firstwrap,
+    .secondwrapper,
+    .thirdwrapper,
+    .fourthwrapper,
+    .fifth-wrapper,
+    .sixth-wrapper,
+    .theheader {
+        padding: 40px 32%;
+    }
+}
+
+
+@media (min-width:3500px) {
+
+    .firstwrap,
+    .secondwrapper,
+    .thirdwrapper,
+    .fourthwrapper,
+    .fifth-wrapper,
+    .sixth-wrapper,
+    .theheader {
+        padding: 40px 35%;
+    }
+}
+
+@media (min-width:4200px) {
+
+    .firstwrap,
+    .secondwrapper,
+    .thirdwrapper,
+    .fourthwrapper,
+    .fifth-wrapper,
+    .sixth-wrapper,
+    .theheader {
+        padding: 40px 37%;
+    }
+}
+
+@media (min-width:4846px) {
+
+    .firstwrap,
+    .secondwrapper,
+    .thirdwrapper,
+    .fourthwrapper,
+    .fifth-wrapper,
+    .sixth-wrapper,
+    .theheader {
+        padding: 40px 38%;
+    }
+}
