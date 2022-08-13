@@ -38,7 +38,7 @@ body {
 }
 
 p {
-    width: 80%;
+    /* width: 80%; */
     font-size: 90%;
     color: var(--paragraphs-color);
 }
@@ -625,6 +625,14 @@ p {
     position: relative;
 }
 
+.div:hover img{
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
 /* THE IMAGE WITH THE CLASS DIVIDED I WAS OUT OF NAMES WHEN I NAMED THIS*/
 .divided {
     width: 100%;
@@ -634,11 +642,6 @@ p {
     -moz-transition: 0.7s ease;
     -ms-transition: 0.7s ease;
     -o-transition: 0.7s ease;
-}
-
-/* THE DIVIDED HOVER EFFECT*/
-.div:hover .divided {
-    opacity: .3;
 }
 
 /* THE PROJECTS TEXTS */
@@ -695,12 +698,34 @@ p {
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
 }
 
 /* MY CLIENT TESTIMONIAL  HOVER EFFECT*/
 .my-client:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
+.my-client img{
+    transition:transform 0.7s ease;
+    -webkit-transition:transform 0.7s ease;
+    -moz-transition:transform 0.7s ease;
+    -ms-transition:transform 0.7s ease;
+    -o-transition:transform 0.7s ease;
+}
+
+/* MY CLIENT TESTIMONIAL IMAGE HOVER EFFECT */
+.my-client:hover img{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
 
 /* MY CLIENT NAME */
 .client-name {
@@ -881,6 +906,9 @@ font-size: 15px;
     .self1 {
         grid-column: 1/2;
     }
+    /* THE HEADER OF THE THIRD WRAPPER */
+    .thirdwrapheader p {
+        width: 100%;}
 
     /* THE SKILLS */
     .skills {
